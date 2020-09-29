@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:vue-scoped-css/vue3-recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "vue"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "extraFileExtensions": [
+      "vue",
+      "ts",
+      "tsx"
+    ],
+    "project": "./tsconfig.json",
+    "useJSXTextNode": true
+  },
+  "rules": {
+    "import/no-unresolved": "off",
+    "semi": "off",
+    "trailingComma": "off"
+  }
+}
