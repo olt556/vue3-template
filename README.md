@@ -9,6 +9,6 @@
 
 ## Structure
 - SPA
-- Vue3 + TypeScript + SASS + ESlint 
+- Vue3 + TypeScript + Bable + SASS + ESlint
 - Webpack
 
