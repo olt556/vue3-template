@@ -7,7 +7,7 @@
 `lint-check`: eslintとprettierのチェックを行う  
 `lint-fix`: eslintとprettierのチェックを行いそれに沿って修正する    
 
-## Structyre
+## Structure
 - SPA
 - Vue3 + TypeScript + SASS + ESlint 
 - Webpack
