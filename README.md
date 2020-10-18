@@ -1,14 +1,15 @@
-# Vue3 Using TypeScript Template
+# Vue3 + Vuex Using TypeScript Template
 
 ## Build
 
-`build`: ビルドを行う  
-`start`: ローカルサーバを立ち上げる  
-`lint-check`: eslintとprettierのチェックを行う  
-`lint-fix`: eslintとprettierのチェックを行いそれに沿って修正する    
+`build-dev`: Build Development  
+`build-prod`: Build Production  
+`start`: start LocalServer on localhost:8080  
+`lint-check`: checked by eslint, prettier
+`lint-fix`: checked and fix by eslint, prettier
 
 ## Structure
 - SPA
-- Vue3 + TypeScript + Bable + SASS + ESlint
+- Vue3 + Vuex + TypeScript + Bable + SASS + ESlint
 - Webpack
 

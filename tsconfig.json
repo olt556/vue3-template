@@ -3,6 +3,7 @@
     "sourceMap": true,
     "allowJs": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "module": "ESNext",
     "target": "es5",
     "lib": [
