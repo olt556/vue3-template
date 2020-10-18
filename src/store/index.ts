@@ -16,13 +16,13 @@ type VuexArgs = {
 }
 
 const rootState: RootState = {
-  count: 0
+  count: 0,
 }
 
 const getters: GetterTree<RootState, unknown> = {
   getCount() {
     return rootState.count
-  }
+  },
 }
 const actions: ActionTree<RootState, unknown> = {
   INCREMENT({ commit }: VuexArgs) {
@@ -30,22 +30,22 @@ const actions: ActionTree<RootState, unknown> = {
   },
   DECREMENT({ commit }: VuexArgs) {
     commit('DECREMENT')
-  }
+  },
 }
 const mutations: MutationTree<RootState> = {
   INCREMENT() {
-    rootState.count++
+    rootState.count += 1
   },
   DECREMENT() {
-    rootState.count--
-  }
+    rootState.count -= 1
+  },
 }
 
 const RootStore = {
   rootState,
   getters,
   actions,
-  mutations
+  mutations,
 }
 
 export const store = createStore(RootStore)

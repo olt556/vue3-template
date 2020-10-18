@@ -3,14 +3,20 @@
     <h1 class="test__test">
       Vue Samle {{ state.count }}
     </h1>
-    <CoverComponents />
-    <button @click="increment()">ぷらす</button>
-    <button @click="decrement()">まいなす</button>
+    <CoverComponent />
+    <button @click="increment()">
+      ぷらす
+    </button>
+    <button @click="decrement()">
+      まいなす
+    </button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive, ref } from 'vue'
+import {
+  defineComponent, computed, reactive, ref,
+} from 'vue'
 import CoverComponent from '@/components/CoverComponent'
 import { useStore } from 'vuex'
 
@@ -23,7 +29,7 @@ export default defineComponent({
     const state: {
       count: number,
     } = reactive({
-      count: store.getters.getCount
+      count: store.getters.getCount,
     })
     const increment = () => {
       store.dispatch('INCREMENT')
@@ -36,9 +42,9 @@ export default defineComponent({
     return {
       state,
       increment,
-      decrement
+      decrement,
     }
-  }
+  },
 })
 </script>
 
