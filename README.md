@@ -10,6 +10,7 @@
 
 ## Structure
 - SPA
-- Vue3 + Vuex + TypeScript + Bable + SASS + ESlint
+- Vue3 + TypeScript + Bable + SASS + ESlint
+- Provieder Pattern
 - Webpack
 

@@ -17,28 +17,15 @@
 import {
   defineComponent, computed, reactive, ref,
 } from 'vue'
-import CoverComponent from '@/components/CoverComponent'
-import { useStore } from 'vuex'
+import CoverComponent from './components/CoverComponent'
+import provider from './provider'
 
 export default defineComponent({
   components: {
     CoverComponent,
   },
   setup() {
-    const store = useStore()
-    const state: {
-      count: number,
-    } = reactive({
-      count: store.getters.getCount,
-    })
-    const increment = () => {
-      store.dispatch('INCREMENT')
-      state.count = store.getters.getCount
-    }
-    const decrement = () => {
-      store.dispatch('DECREMENT')
-      state.count = store.getters.getCount
-    }
+    const { state, increment, decrement } = provider()
     return {
       state,
       increment,
