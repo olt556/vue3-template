@@ -18,7 +18,7 @@ import {
   defineComponent, reactive,
 } from 'vue'
 import CoverComponent from '@/components/CoverComponent'
-import { useStore } from './store/index'
+import { useStore } from '@/store/index'
 
 export default defineComponent({
   components: {
@@ -29,12 +29,12 @@ export default defineComponent({
     const {
       state,
       actions,
-      getters
+      getters,
     } = useStore().useStoreTop
     return {
       state,
       actions,
-      getters
+      getters,
     }
   },
 })

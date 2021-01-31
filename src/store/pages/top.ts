@@ -13,15 +13,6 @@ export function useStoreTop() {
     },
   }
 
-  const actions = {
-    increment() {
-      mutations.increment()
-    },
-    decrement() {
-      mutations.decrement()
-    },
-  }
-
   const mutations = {
     increment() {
       state.count += 1
@@ -31,9 +22,18 @@ export function useStoreTop() {
     },
   }
 
+  const actions = {
+    increment() {
+      mutations.increment()
+    },
+    decrement() {
+      mutations.decrement()
+    },
+  }
+
   return {
     state,
     getters,
-    actions
+    actions,
   }
 }

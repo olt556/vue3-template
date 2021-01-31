@@ -1,4 +1,4 @@
-import { useStoreTop } from './pages/top'
+import { useStoreTop } from '@/store/pages/top'
 
 export function useStore() {
   return {
