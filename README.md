@@ -11,6 +11,6 @@
 ## Structure
 - SPA
 - Vue3 + TypeScript + Bable + SASS + ESlint
-- Provider Pattern
+- Store Pattern
 - Webpack
 
