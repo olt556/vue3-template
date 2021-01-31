@@ -5,6 +5,7 @@
     "strict": true,
     "module": "ESNext",
     "target": "es5",
+    "moduleResolution": "node",
     "lib": [
       "esnext",
       "dom",
@@ -13,9 +14,9 @@
     ]
   },
   "esModuleInterop": true,
-  "baseUrl": "./",
+  "baseUrl": "/",
   "paths": {
-    "@/*": "src/**/*",
+    "@/*": "src/*",
   },
   "include": [
     "src",

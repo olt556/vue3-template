@@ -25,7 +25,7 @@ module.exports = (env: string) => ({
       '@': path.resolve(__dirname, 'src'),
       'vue': '@vue/runtime-dom'
     },
-    extensions: ['.vue', '.ts', '.tsx', '.d.ts']
+    extensions: ['.vue', '.ts', '.tsx', '.d.ts', '.js']
   },
   module: {
     rules: [
@@ -59,6 +59,7 @@ module.exports = (env: string) => ({
             loader: 'ts-loader',
             options: {
               appendTsSuffixTo: ['\\.vue$'],
+              allowTsInNodeModules: true,
             }
           }
         ]
