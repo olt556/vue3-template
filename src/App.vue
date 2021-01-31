@@ -1,13 +1,13 @@
 <template>
   <div>
     <h1 class="test__test">
-      Vue Samle {{ state.count }}
+      Vue Samle {{ getters.getCount() }}
     </h1>
     <CoverComponent />
-    <button @click="increment()">
+    <button @click="actions.increment()">
       ぷらす
     </button>
-    <button @click="decrement()">
+    <button @click="actions.decrement()">
       まいなす
     </button>
   </div>
@@ -15,21 +15,26 @@
 
 <script lang="ts">
 import {
-  defineComponent, computed, reactive, ref,
+  defineComponent, reactive,
 } from 'vue'
-import CoverComponent from './components/CoverComponent'
-import provider from './provider'
+import CoverComponent from '@/components/CoverComponent'
+import { useStore } from './store/index'
 
 export default defineComponent({
   components: {
     CoverComponent,
   },
+
   setup() {
-    const { state, increment, decrement } = provider()
+    const {
+      state,
+      actions,
+      getters
+    } = useStore().useStoreTop
     return {
       state,
-      increment,
-      decrement,
+      actions,
+      getters
     }
   },
 })
