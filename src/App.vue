@@ -14,9 +14,7 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent, reactive,
-} from 'vue'
+import { defineComponent } from 'vue'
 import CoverComponent from '@/components/CoverComponent'
 import { useStore } from '@/store/index'
 
